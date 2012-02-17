@@ -20,6 +20,12 @@
 		B7FC2BA014E56557001C47C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FC2B8114E56556001C47C8 /* Foundation.framework */; };
 		B7FC2BA814E56557001C47C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FC2BA614E56557001C47C8 /* InfoPlist.strings */; };
 		B7FC2BAB14E56557001C47C8 /* AccelerationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BAA14E56557001C47C8 /* AccelerationTests.m */; };
+		B7FC2BC114E56BD4001C47C8 /* SenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */; };
+		B7FC2BC414E57CAC001C47C8 /* DataSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BC314E57CAC001C47C8 /* DataSender.m */; };
+		B7FC2BD314EE765D001C47C8 /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BD214EE765C001C47C8 /* InputValidator.m */; };
+		B7FC2BD614EE76C4001C47C8 /* AddressValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BD514EE76C3001C47C8 /* AddressValidator.m */; };
+		B7FC2BD914EE776E001C47C8 /* PortValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BD814EE776E001C47C8 /* PortValidator.m */; };
+		B7FC2BDC14EE7892001C47C8 /* ValidatingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +43,33 @@
 		B7FC2B7F14E56556001C47C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B7FC2B8114E56556001C47C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B7FC2B8314E56556001C47C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B7FC2B8714E56556001C47C8 /* Acceleration-Info.plist */ = {isa = PBXFileReference; path = "Acceleration-Info.plist"; sourceTree = "<group>"; };
+		B7FC2B8714E56556001C47C8 /* Acceleration-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acceleration-Info.plist"; sourceTree = "<group>"; };
 		B7FC2B8914E56556001C47C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7FC2B8B14E56556001C47C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B7FC2B8D14E56556001C47C8 /* Acceleration-Prefix.pch */ = {isa = PBXFileReference; path = "Acceleration-Prefix.pch"; sourceTree = "<group>"; };
-		B7FC2B8E14E56556001C47C8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7FC2B8D14E56556001C47C8 /* Acceleration-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acceleration-Prefix.pch"; sourceTree = "<group>"; };
+		B7FC2B8E14E56556001C47C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7FC2B8F14E56556001C47C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B7FC2B9214E56556001C47C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B7FC2B9414E56556001C47C8 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B7FC2B9414E56556001C47C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B7FC2B9514E56556001C47C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B7FC2B9C14E56557001C47C8 /* AccelerationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FC2B9D14E56557001C47C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B7FC2BA514E56557001C47C8 /* AccelerationTests-Info.plist */ = {isa = PBXFileReference; path = "AccelerationTests-Info.plist"; sourceTree = "<group>"; };
+		B7FC2BA514E56557001C47C8 /* AccelerationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccelerationTests-Info.plist"; sourceTree = "<group>"; };
 		B7FC2BA714E56557001C47C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B7FC2BA914E56557001C47C8 /* AccelerationTests.h */ = {isa = PBXFileReference; path = AccelerationTests.h; sourceTree = "<group>"; };
+		B7FC2BA914E56557001C47C8 /* AccelerationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccelerationTests.h; sourceTree = "<group>"; };
 		B7FC2BAA14E56557001C47C8 /* AccelerationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccelerationTests.m; sourceTree = "<group>"; };
+		B7FC2BBF14E56BD4001C47C8 /* SenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderViewController.h; sourceTree = "<group>"; };
+		B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderViewController.m; sourceTree = "<group>"; };
+		B7FC2BC214E57CAC001C47C8 /* DataSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSender.h; sourceTree = "<group>"; };
+		B7FC2BC314E57CAC001C47C8 /* DataSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSender.m; sourceTree = "<group>"; };
+		B7FC2BD114EE765B001C47C8 /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
+		B7FC2BD214EE765C001C47C8 /* InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidator.m; sourceTree = "<group>"; };
+		B7FC2BD414EE76C3001C47C8 /* AddressValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressValidator.h; sourceTree = "<group>"; };
+		B7FC2BD514EE76C3001C47C8 /* AddressValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressValidator.m; sourceTree = "<group>"; };
+		B7FC2BD714EE776E001C47C8 /* PortValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortValidator.h; sourceTree = "<group>"; };
+		B7FC2BD814EE776E001C47C8 /* PortValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortValidator.m; sourceTree = "<group>"; };
+		B7FC2BDA14EE7891001C47C8 /* ValidatingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatingTextField.h; sourceTree = "<group>"; };
+		B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatingTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +131,21 @@
 			children = (
 				B7FC2B8E14E56556001C47C8 /* AppDelegate.h */,
 				B7FC2B8F14E56556001C47C8 /* AppDelegate.m */,
+				B7FC2BDA14EE7891001C47C8 /* ValidatingTextField.h */,
+				B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */,
+				B7FC2BBF14E56BD4001C47C8 /* SenderViewController.h */,
+				B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */,
 				B7FC2B9114E56556001C47C8 /* MainStoryboard.storyboard */,
 				B7FC2B9414E56556001C47C8 /* ViewController.h */,
 				B7FC2B9514E56556001C47C8 /* ViewController.m */,
+				B7FC2BC214E57CAC001C47C8 /* DataSender.h */,
+				B7FC2BC314E57CAC001C47C8 /* DataSender.m */,
+				B7FC2BD114EE765B001C47C8 /* InputValidator.h */,
+				B7FC2BD214EE765C001C47C8 /* InputValidator.m */,
+				B7FC2BD414EE76C3001C47C8 /* AddressValidator.h */,
+				B7FC2BD514EE76C3001C47C8 /* AddressValidator.m */,
+				B7FC2BD714EE776E001C47C8 /* PortValidator.h */,
+				B7FC2BD814EE776E001C47C8 /* PortValidator.m */,
 				B7FC2B8614E56556001C47C8 /* Supporting Files */,
 			);
 			path = Acceleration;
@@ -161,6 +191,7 @@
 				B7FC2B7714E56556001C47C8 /* Sources */,
 				B7FC2B7814E56556001C47C8 /* Frameworks */,
 				B7FC2B7914E56556001C47C8 /* Resources */,
+				B7FC2BBE14E569DE001C47C8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +281,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		B7FC2BBE14E569DE001C47C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Developer/iphoneentitlements401/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,6 +304,12 @@
 				B7FC2B8C14E56556001C47C8 /* main.m in Sources */,
 				B7FC2B9014E56556001C47C8 /* AppDelegate.m in Sources */,
 				B7FC2B9614E56556001C47C8 /* ViewController.m in Sources */,
+				B7FC2BC114E56BD4001C47C8 /* SenderViewController.m in Sources */,
+				B7FC2BC414E57CAC001C47C8 /* DataSender.m in Sources */,
+				B7FC2BD314EE765D001C47C8 /* InputValidator.m in Sources */,
+				B7FC2BD614EE76C4001C47C8 /* AddressValidator.m in Sources */,
+				B7FC2BD914EE776E001C47C8 /* PortValidator.m in Sources */,
+				B7FC2BDC14EE7892001C47C8 /* ValidatingTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +365,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -340,7 +390,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -357,6 +407,7 @@
 		B7FC2BAF14E56557001C47C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Acceleration/Acceleration-Prefix.pch";
 				INFOPLIST_FILE = "Acceleration/Acceleration-Info.plist";
@@ -368,6 +419,7 @@
 		B7FC2BB014E56557001C47C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Acceleration/Acceleration-Prefix.pch";
 				INFOPLIST_FILE = "Acceleration/Acceleration-Info.plist";

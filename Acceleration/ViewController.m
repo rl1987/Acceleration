@@ -1,60 +1,67 @@
-//
-//  ViewController.m
-//  Acceleration
-//
-//  Created by avitela avitela on 2012-02-10.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "ViewController.h"
 
 @implementation ViewController
+@synthesize readoutLabel;
 
-- (void)didReceiveMemoryWarning
+#pragma mark -
+#pragma mark Sender view controller delegate
+
+- (void)senderViewController:(SenderViewController *)svc 
+        didFinishWithAddress:(NSString *)ipAddressString
+                     andPort:(int)port
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    NSLog(@"ViewController senderViewController:didFinishWithAddress:andPort:");
+    NSLog(@"%@ %d",ipAddressString,port);
+}
+
+#pragma mark -
+#pragma mark Accelerometer delegate
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer 
+        didAccelerate:(UIAcceleration *)acceleration 
+{
+    self.readoutLabel.text = [NSString stringWithFormat:@"%g, %g, %g",
+                              acceleration.x,acceleration.y,acceleration.z];
+    
+//    if ([[DataSender defaultSender] isReady])
+//        [[DataSender defaultSender] sendString:
+//         [NSString stringWithFormat:@"%g %g %g",
+//          acceleration.x,acceleration.y,acceleration.z]];
 }
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
 - (void)viewDidUnload
 {
+    [self setReadoutLabel:nil];
+    
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
+
+#define PERIOD 0.1
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    
+    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:PERIOD];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation:
+(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark -
+#pragma Prepare for segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [(SenderViewController *)segue.destinationViewController setDelegate:self];
 }
 
 @end
