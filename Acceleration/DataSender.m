@@ -121,7 +121,7 @@ static DataSender *_defaultSender;
     if (eventCode == NSStreamEventErrorOccurred)
     {
         self.destinationIP = nil;
-        self.destinationPort = nil;
+        self.destinationPort = 0;
         self.outStream = nil;
         self.ready = NO;
     }
