@@ -5,6 +5,8 @@
 @property (nonatomic,strong) DataSender *sender;
 @property (nonatomic,assign) BOOL sending;
 
+- (void)goBackToNonSendingState;
+
 @end
 
 @implementation ViewController
@@ -14,6 +16,21 @@
 
 @synthesize sender = _sender;
 @synthesize sending = _sending;
+
+- (void)goBackToNonSendingState
+{
+    UIAlertView *alert = 
+    [[UIAlertView alloc] initWithTitle:@"ERROR" 
+                               message:@"Network connection failed." 
+                              delegate:nil 
+                     cancelButtonTitle:@"OK" 
+                     otherButtonTitles:nil];
+        
+    [alert show];
+    
+    self.sending = NO;
+    self.senderButton.titleLabel.text = @"Transmit";
+}
 
 #pragma mark -
 #pragma mark Sender view controller delegate
@@ -28,12 +45,14 @@
     self.sender.destinationIP = ipAddressString;
     self.sender.destinationPort = port;
     
-    self.sending = YES;
-    
     if ([self.sender isReady])
     {
+        self.sending = YES;
         self.senderButton.titleLabel.text = @"Stop";
     }
+    else
+        [self goBackToNonSendingState];
+
 }
 
 #pragma mark -
@@ -45,10 +64,15 @@
     self.readoutLabel.text = [NSString stringWithFormat:@"%g, %g, %g",
                               acceleration.x,acceleration.y,acceleration.z];
     
-    if ((self.sending == YES) && [self.sender isReady])
-        [self.sender sendString:
-         [NSString stringWithFormat:@"%g %g %g\n",
-          acceleration.x,acceleration.y,acceleration.z]];
+    if (self.sending == YES)
+    {
+        if ([self.sender isReady])
+            [self.sender sendString:[NSString stringWithFormat:@"%g %g %g\n",
+                                     acceleration.x,acceleration.y,
+                                     acceleration.z]];
+        else
+            [self goBackToNonSendingState];
+    }
 }
 
 #pragma mark - View lifecycle

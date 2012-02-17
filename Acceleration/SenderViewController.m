@@ -16,6 +16,17 @@
     self.addressField.validator = [[AddressValidator alloc] init];
     self.portField.validator = [[PortValidator alloc] init];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *defaultAddress = [defaults objectForKey:@"address"];
+    NSNumber *defaultPort = [defaults objectForKey:@"port"];
+    
+    if (defaultAddress)
+        self.addressField.text = defaultAddress;
+    
+    if (defaultPort)
+        self.portField.text = [NSString stringWithFormat:@"%d",
+                               [defaultPort intValue]];
 }
 
 - (void)viewDidUnload
@@ -61,9 +72,21 @@
     
     if ((self.delegate) && [self.addressField isValid] && 
         [self.portField isValid])
+    {
+        NSNumber *port = [NSNumber numberWithInt:[self.portField.text intValue]];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults setValue:self.addressField.text forKey:@"address"];
+        
+        [defaults setValue:port forKey:@"port"];
+        
+        [defaults synchronize];
+        
         [self.delegate senderViewController:self 
                        didFinishWithAddress:[self.addressField.text copy]
                                     andPort:[self.portField.text intValue]];
+    }
     
     [self dismissModalViewControllerAnimated:YES];
 }
