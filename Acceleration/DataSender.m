@@ -3,9 +3,6 @@
 static DataSender *_defaultSender;
 
 @interface DataSender() <NSStreamDelegate>
-{
-    
-}
 
 @property (nonatomic,strong) NSOutputStream *outStream;
 @property (nonatomic,assign) BOOL ready;
@@ -32,6 +29,7 @@ static DataSender *_defaultSender;
     CFStreamCreatePairWithSocketToHost(NULL, 
                                        (__bridge CFStringRef)destinationIP, 
                                        self.destinationPort, NULL, &outStream);
+    
     
     self.outStream = (__bridge NSOutputStream *)outStream;
 
@@ -120,6 +118,13 @@ static DataSender *_defaultSender;
     NSLog(@"DataSender stream: handleEvent:");
     NSLog(@"%d",eventCode);
     
+    if (eventCode == NSStreamEventErrorOccurred)
+    {
+        self.destinationIP = nil;
+        self.destinationPort = nil;
+        self.outStream = nil;
+        self.ready = NO;
+    }
 }
 
 
