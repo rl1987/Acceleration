@@ -7,5 +7,8 @@
 <UIAccelerometerDelegate, SenderViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *readoutLabel;
+@property (nonatomic,strong) IBOutlet UIButton *senderButton;
+
+- (IBAction)buttonPressed:(UIButton *)sender;
 
 @end

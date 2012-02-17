@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bjM-8E-OOM" kind="modal" id="fpd-iX-pmx"/>
+                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="lhq-Up-fjS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,6 +40,8 @@
                     </view>
                     <connections>
                         <outlet property="readoutLabel" destination="JQK-aj-A2K" id="SXD-3L-EKV"/>
+                        <outlet property="senderButton" destination="N77-v4-A9L" id="otI-J7-J2l"/>
+                        <segue destination="bjM-8E-OOM" kind="modal" identifier="SegueToCommSenderVC" modalTransitionStyle="flipHorizontal" id="CtB-iK-0z0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -118,6 +120,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lWz-Vf-Gb5"/>
                     <connections>
                         <outlet property="addressField" destination="bdc-jI-nhG" id="19k-7F-YyV"/>
                         <outlet property="portField" destination="OjM-74-cxq" id="22m-5N-3UT"/>
@@ -127,6 +130,28 @@
             <point key="canvasLocation" x="277" y="36"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="SenderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SenderViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelPressed"/>
+                <relationship kind="action" name="okPressed"/>
+                <relationship kind="outlet" name="addressField" candidateClass="ValidatingTextField"/>
+                <relationship kind="outlet" name="portField" candidateClass="ValidatingTextField"/>
+            </relationships>
+        </class>
+        <class className="ValidatingTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ValidatingTextField.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="readoutLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="senderButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
