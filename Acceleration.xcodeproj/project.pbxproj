@@ -15,11 +15,6 @@
 		B7FC2B9014E56556001C47C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2B8F14E56556001C47C8 /* AppDelegate.m */; };
 		B7FC2B9314E56556001C47C8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FC2B9114E56556001C47C8 /* MainStoryboard.storyboard */; };
 		B7FC2B9614E56556001C47C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2B9514E56556001C47C8 /* ViewController.m */; };
-		B7FC2B9E14E56557001C47C8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FC2B9D14E56557001C47C8 /* SenTestingKit.framework */; };
-		B7FC2B9F14E56557001C47C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FC2B7F14E56556001C47C8 /* UIKit.framework */; };
-		B7FC2BA014E56557001C47C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FC2B8114E56556001C47C8 /* Foundation.framework */; };
-		B7FC2BA814E56557001C47C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7FC2BA614E56557001C47C8 /* InfoPlist.strings */; };
-		B7FC2BAB14E56557001C47C8 /* AccelerationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BAA14E56557001C47C8 /* AccelerationTests.m */; };
 		B7FC2BC114E56BD4001C47C8 /* SenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */; };
 		B7FC2BC414E57CAC001C47C8 /* DataSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BC314E57CAC001C47C8 /* DataSender.m */; };
 		B7FC2BD314EE765D001C47C8 /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BD214EE765C001C47C8 /* InputValidator.m */; };
@@ -27,16 +22,6 @@
 		B7FC2BD914EE776E001C47C8 /* PortValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BD814EE776E001C47C8 /* PortValidator.m */; };
 		B7FC2BDC14EE7892001C47C8 /* ValidatingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B7FC2BA114E56557001C47C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7FC2B7214E56556001C47C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7FC2B7A14E56556001C47C8;
-			remoteInfo = Acceleration;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B7FC2B7B14E56556001C47C8 /* Acceleration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acceleration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,12 +37,7 @@
 		B7FC2B9214E56556001C47C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B7FC2B9414E56556001C47C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B7FC2B9514E56556001C47C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B7FC2B9C14E56557001C47C8 /* AccelerationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FC2B9D14E56557001C47C8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B7FC2BA514E56557001C47C8 /* AccelerationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccelerationTests-Info.plist"; sourceTree = "<group>"; };
-		B7FC2BA714E56557001C47C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B7FC2BA914E56557001C47C8 /* AccelerationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccelerationTests.h; sourceTree = "<group>"; };
-		B7FC2BAA14E56557001C47C8 /* AccelerationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccelerationTests.m; sourceTree = "<group>"; };
 		B7FC2BBF14E56BD4001C47C8 /* SenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderViewController.h; sourceTree = "<group>"; };
 		B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderViewController.m; sourceTree = "<group>"; };
 		B7FC2BC214E57CAC001C47C8 /* DataSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSender.h; sourceTree = "<group>"; };
@@ -83,16 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7FC2B9814E56557001C47C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7FC2B9E14E56557001C47C8 /* SenTestingKit.framework in Frameworks */,
-				B7FC2B9F14E56557001C47C8 /* UIKit.framework in Frameworks */,
-				B7FC2BA014E56557001C47C8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				B7FC2B8514E56556001C47C8 /* Acceleration */,
-				B7FC2BA314E56557001C47C8 /* AccelerationTests */,
 				B7FC2B7E14E56556001C47C8 /* Frameworks */,
 				B7FC2B7C14E56556001C47C8 /* Products */,
 			);
@@ -110,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				B7FC2B7B14E56556001C47C8 /* Acceleration.app */,
-				B7FC2B9C14E56557001C47C8 /* AccelerationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,23 +97,9 @@
 		B7FC2B8514E56556001C47C8 /* Acceleration */ = {
 			isa = PBXGroup;
 			children = (
-				B7FC2B8E14E56556001C47C8 /* AppDelegate.h */,
-				B7FC2B8F14E56556001C47C8 /* AppDelegate.m */,
-				B7FC2BDA14EE7891001C47C8 /* ValidatingTextField.h */,
-				B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */,
-				B7FC2BBF14E56BD4001C47C8 /* SenderViewController.h */,
-				B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */,
-				B7FC2B9114E56556001C47C8 /* MainStoryboard.storyboard */,
-				B7FC2B9414E56556001C47C8 /* ViewController.h */,
-				B7FC2B9514E56556001C47C8 /* ViewController.m */,
-				B7FC2BC214E57CAC001C47C8 /* DataSender.h */,
-				B7FC2BC314E57CAC001C47C8 /* DataSender.m */,
-				B7FC2BD114EE765B001C47C8 /* InputValidator.h */,
-				B7FC2BD214EE765C001C47C8 /* InputValidator.m */,
-				B7FC2BD414EE76C3001C47C8 /* AddressValidator.h */,
-				B7FC2BD514EE76C3001C47C8 /* AddressValidator.m */,
-				B7FC2BD714EE776E001C47C8 /* PortValidator.h */,
-				B7FC2BD814EE776E001C47C8 /* PortValidator.m */,
+				B7FC2BDF14EED885001C47C8 /* Model */,
+				B7FC2BDE14EED859001C47C8 /* Controllers */,
+				B7FC2BDD14EED7E8001C47C8 /* Input Validation */,
 				B7FC2B8614E56556001C47C8 /* Supporting Files */,
 			);
 			path = Acceleration;
@@ -154,6 +108,8 @@
 		B7FC2B8614E56556001C47C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7FC2B8E14E56556001C47C8 /* AppDelegate.h */,
+				B7FC2B8F14E56556001C47C8 /* AppDelegate.m */,
 				B7FC2B8714E56556001C47C8 /* Acceleration-Info.plist */,
 				B7FC2B8814E56556001C47C8 /* InfoPlist.strings */,
 				B7FC2B8B14E56556001C47C8 /* main.m */,
@@ -162,23 +118,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B7FC2BA314E56557001C47C8 /* AccelerationTests */ = {
+		B7FC2BDD14EED7E8001C47C8 /* Input Validation */ = {
 			isa = PBXGroup;
 			children = (
-				B7FC2BA914E56557001C47C8 /* AccelerationTests.h */,
-				B7FC2BAA14E56557001C47C8 /* AccelerationTests.m */,
-				B7FC2BA414E56557001C47C8 /* Supporting Files */,
+				B7FC2BDA14EE7891001C47C8 /* ValidatingTextField.h */,
+				B7FC2BDB14EE7891001C47C8 /* ValidatingTextField.m */,
+				B7FC2BD114EE765B001C47C8 /* InputValidator.h */,
+				B7FC2BD214EE765C001C47C8 /* InputValidator.m */,
+				B7FC2BD414EE76C3001C47C8 /* AddressValidator.h */,
+				B7FC2BD514EE76C3001C47C8 /* AddressValidator.m */,
+				B7FC2BD714EE776E001C47C8 /* PortValidator.h */,
+				B7FC2BD814EE776E001C47C8 /* PortValidator.m */,
 			);
-			path = AccelerationTests;
+			name = "Input Validation";
 			sourceTree = "<group>";
 		};
-		B7FC2BA414E56557001C47C8 /* Supporting Files */ = {
+		B7FC2BDE14EED859001C47C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B7FC2BA514E56557001C47C8 /* AccelerationTests-Info.plist */,
-				B7FC2BA614E56557001C47C8 /* InfoPlist.strings */,
+				B7FC2B9114E56556001C47C8 /* MainStoryboard.storyboard */,
+				B7FC2BBF14E56BD4001C47C8 /* SenderViewController.h */,
+				B7FC2BC014E56BD4001C47C8 /* SenderViewController.m */,
+				B7FC2B9414E56556001C47C8 /* ViewController.h */,
+				B7FC2B9514E56556001C47C8 /* ViewController.m */,
 			);
-			name = "Supporting Files";
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B7FC2BDF14EED885001C47C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7FC2BC214E57CAC001C47C8 /* DataSender.h */,
+				B7FC2BC314E57CAC001C47C8 /* DataSender.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,25 +175,6 @@
 			productReference = B7FC2B7B14E56556001C47C8 /* Acceleration.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B7FC2B9B14E56557001C47C8 /* AccelerationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B7FC2BB114E56557001C47C8 /* Build configuration list for PBXNativeTarget "AccelerationTests" */;
-			buildPhases = (
-				B7FC2B9714E56557001C47C8 /* Sources */,
-				B7FC2B9814E56557001C47C8 /* Frameworks */,
-				B7FC2B9914E56557001C47C8 /* Resources */,
-				B7FC2B9A14E56557001C47C8 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B7FC2BA214E56557001C47C8 /* PBXTargetDependency */,
-			);
-			name = AccelerationTests;
-			productName = AccelerationTests;
-			productReference = B7FC2B9C14E56557001C47C8 /* AccelerationTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,7 +196,6 @@
 			projectRoot = "";
 			targets = (
 				B7FC2B7A14E56556001C47C8 /* Acceleration */,
-				B7FC2B9B14E56557001C47C8 /* AccelerationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,30 +210,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7FC2B9914E56557001C47C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7FC2BA814E56557001C47C8 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B7FC2B9A14E56557001C47C8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 		B7FC2BBE14E569DE001C47C8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,23 +245,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7FC2B9714E56557001C47C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7FC2BAB14E56557001C47C8 /* AccelerationTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B7FC2BA214E56557001C47C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B7FC2B7A14E56556001C47C8 /* Acceleration */;
-			targetProxy = B7FC2BA114E56557001C47C8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7FC2B8814E56556001C47C8 /* InfoPlist.strings */ = {
@@ -346,14 +262,6 @@
 				B7FC2B9214E56556001C47C8 /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		B7FC2BA614E56557001C47C8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7FC2BA714E56557001C47C8 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -428,40 +336,6 @@
 			};
 			name = Release;
 		};
-		B7FC2BB214E56557001C47C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Acceleration.app/Acceleration";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Acceleration/Acceleration-Prefix.pch";
-				INFOPLIST_FILE = "AccelerationTests/AccelerationTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		B7FC2BB314E56557001C47C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Acceleration.app/Acceleration";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Acceleration/Acceleration-Prefix.pch";
-				INFOPLIST_FILE = "AccelerationTests/AccelerationTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,14 +353,6 @@
 			buildConfigurations = (
 				B7FC2BAF14E56557001C47C8 /* Debug */,
 				B7FC2BB014E56557001C47C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		B7FC2BB114E56557001C47C8 /* Build configuration list for PBXNativeTarget "AccelerationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7FC2BB214E56557001C47C8 /* Debug */,
-				B7FC2BB314E56557001C47C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
