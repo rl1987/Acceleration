@@ -44,7 +44,6 @@ static DataSender *_defaultSender;
     
     self.ready = YES;
     
-    [self.outStream open];
 }
 
 - (void)setDestinationPort:(int)destinationPort
@@ -71,7 +70,6 @@ static DataSender *_defaultSender;
     
     self.ready = YES;
     
-    [self.outStream open];
 }
 
 + (DataSender *)defaultSender
@@ -87,21 +85,7 @@ static DataSender *_defaultSender;
     self = [super init];
     
     if (self)
-    {
-//        CFWriteStreamRef outStream;
-//        
-//        CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)self.destinationIP, 
-//                                           self.destinationPort, NULL, 
-//                                           &outStream);
-//        
-//        self.outStream = (__bridge NSOutputStream *)outStream;
-//        
-//        self.outStream.delegate = self;
-//        
-//        [self.outStream scheduleInRunLoop:[NSRunLoop currentRunLoop] 
-//                                  forMode:NSDefaultRunLoopMode];
         self.ready = NO;        
-    }
     
     return self;
 }
@@ -115,7 +99,11 @@ static DataSender *_defaultSender;
 - (void)sendData:(NSData *)data
 {
     if (self.ready)
+    {
+        [self.outStream open];
+        
         [self.outStream write:[data bytes] maxLength:[data length]];
+    }
 }
 
 - (BOOL)isReady
