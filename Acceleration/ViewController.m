@@ -11,7 +11,14 @@
 
 @implementation ViewController
 
-@synthesize readoutLabel;
+@synthesize xIndicator;
+@synthesize yIndicator;
+@synthesize zIndicator;
+
+@synthesize xLabel;
+@synthesize yLabel;
+@synthesize zLabel;
+
 @synthesize senderButton;
 
 @synthesize sender = _sender;
@@ -58,12 +65,20 @@
 #pragma mark -
 #pragma mark Accelerometer delegate
 
+#define MAX_ACCELL 2.1
+
 - (void)accelerometer:(UIAccelerometer *)accelerometer 
         didAccelerate:(UIAcceleration *)acceleration 
 {
-    self.readoutLabel.text = [NSString stringWithFormat:@"%g, %g, %g",
-                              acceleration.x,acceleration.y,acceleration.z];
     
+    self.xLabel.text = [NSString stringWithFormat:@"a.x = %g",acceleration.x];
+    self.yLabel.text = [NSString stringWithFormat:@"a.y = %g",acceleration.y];
+    self.zLabel.text = [NSString stringWithFormat:@"a.z = %g",acceleration.z];
+    
+    self.xIndicator.progress = 0.5f + (float)(acceleration.x/MAX_ACCELL);
+    self.yIndicator.progress = 0.5f + (float)(acceleration.y/MAX_ACCELL);
+    self.zIndicator.progress = 0.5f + (float)(acceleration.z/MAX_ACCELL);
+
     if (self.sending == YES)
     {
         if ([self.sender isReady])
@@ -79,6 +94,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    
     self.sending = NO;
     
     self.sender = [[DataSender alloc] init];
@@ -86,9 +103,15 @@
 
 - (void)viewDidUnload
 {
-    [self setReadoutLabel:nil];
     
     self.senderButton = nil;
+    
+    [self setXLabel:nil];
+    [self setYLabel:nil];
+    [self setZLabel:nil];
+    [self setXIndicator:nil];
+    [self setYIndicator:nil];
+    [self setZIndicator:nil];
     
     [super viewDidUnload];
 }

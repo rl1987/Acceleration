@@ -13,13 +13,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="JQK-aj-A2K">
-                                <rect key="frame" x="20" y="219" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N77-v4-A9L">
                                 <rect key="frame" x="20" y="403" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -35,12 +28,50 @@
                                     <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="lhq-Up-fjS"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="NF5-gT-IHi">
+                                <rect key="frame" x="20" y="225" width="280" height="9"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="b4U-ur-jbD">
+                                <rect key="frame" x="20" y="196" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="fDw-fp-Ec4">
+                                <rect key="frame" x="20" y="179" width="280" height="9"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="BPy-dI-UbS">
+                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="sh3-pT-N9j">
+                                <rect key="frame" x="20" y="242" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="NWB-Pi-xKh">
+                                <rect key="frame" x="20" y="271" width="280" height="9"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="readoutLabel" destination="JQK-aj-A2K" id="SXD-3L-EKV"/>
                         <outlet property="senderButton" destination="N77-v4-A9L" id="otI-J7-J2l"/>
+                        <outlet property="xIndicator" destination="fDw-fp-Ec4" id="vMG-iU-QG0"/>
+                        <outlet property="xLabel" destination="BPy-dI-UbS" id="sWN-ur-gdi"/>
+                        <outlet property="yIndicator" destination="NF5-gT-IHi" id="5ZC-4e-jiM"/>
+                        <outlet property="yLabel" destination="b4U-ur-jbD" id="Uz0-13-iEJ"/>
+                        <outlet property="zIndicator" destination="NWB-Pi-xKh" id="SQ9-hN-ulF"/>
+                        <outlet property="zLabel" destination="sh3-pT-N9j" id="zgh-Ma-hcx"/>
                         <segue destination="bjM-8E-OOM" kind="modal" identifier="SegueToCommSenderVC" modalTransitionStyle="flipHorizontal" id="CtB-iK-0z0"/>
                     </connections>
                 </viewController>
@@ -147,8 +178,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="readoutLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="senderButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="xIndicator" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="xLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yIndicator" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="yLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="zIndicator" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="zLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
